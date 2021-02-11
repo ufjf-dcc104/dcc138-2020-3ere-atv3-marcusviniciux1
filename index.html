@@ -11,10 +11,10 @@
     <script>
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext("2d");
-        const skelly = new Image();
-        skelly.src = "assets/rogueknight.png";
+        const rogueknight = new Image();
+        rogueknight.src = "assets/rogueknight.png";
 
-        skelly.addEventListener("load", terminouDeCarregar);
+        rogueknight.addEventListener("load", terminouDeCarregar);
 
         function desenhaFundo() {
             ctx.fillStyle = "green";
@@ -53,7 +53,7 @@
 
             quadro = (quadro >= POSES[pose].qmax - 1) ? 0 : quadro + POSES[pose].pv * dt;
         
-            ctx.drawImage(skelly,
+            ctx.drawImage(rogueknight,
                 //sx, sy, sw, sh
                 Math.floor(quadro)*50, pose*37, 50, 37,
                 //dx, dy, dw, dh                
